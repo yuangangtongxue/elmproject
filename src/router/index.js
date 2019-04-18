@@ -6,6 +6,7 @@ import order from '@/page/order'
 import mine from '@/page/mine'
 import detailnav from '@/page/detailnav'
 import storeitem from '@/page/storeitem'
+import givemoney from '@/page/givemoney'
 
 
 Vue.use(Router)
@@ -45,6 +46,11 @@ export default new Router({
       path: '/storeitem',
       name: 'storeitem',
       component: storeitem
+    },
+    {
+      path: '/givemoney',
+      name: 'givemoney',
+      component: givemoney
     },
   ]
 })

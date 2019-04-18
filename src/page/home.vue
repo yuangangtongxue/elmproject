@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="outcontain">
     <titlecomponent></titlecomponent>
     <div class="swiper-container">
       <div class="swiper-wrapper">
@@ -11,7 +11,7 @@
             @click="todetailnav(nav.word)"
           >
             <div class="pic-part">
-              <img :src="now">
+              <img :src = nav.picurl>
             </div>
             <span class="word-part">{{nav.word}}</span>
           </div>
@@ -24,7 +24,7 @@
             @click="todetailnav(nav.word)"
           >
             <div class="pic-part">
-              <img :src="now">
+              <img :src = nav.picurl>
             </div>
             <span class="word-part">{{nav.word}}</span>
           </div>
@@ -86,14 +86,14 @@ export default {
     return {
       now: require("@/assets/meishi.jpg"),
       message: [
-        { id: 1, picurl: "@/assets/meishi.jpg", word: "美食1" },
-        { id: 2, picurl: "@/assets/meishi.jpg", word: "美食2" },
-        { id: 3, picurl: "@/assets/meishi.jpg", word: "美食3" },
-        { id: 4, picurl: "@/assets/meishi.jpg", word: "美食4" },
-        { id: 5, picurl: "@/assets/meishi.jpg", word: "美食5" },
-        { id: 6, picurl: "@/assets/meishi.jpg", word: "美食6" },
-        { id: 7, picurl: "@/assets/meishi.jpg", word: "美食7" },
-        { id: 8, picurl: "@/assets/meishi.jpg", word: "美食8" }
+        { id: 1, picurl: require("@/assets/meishi1.png"), word: "美食1" },
+        { id: 2, picurl: require("@/assets/meishi1.png"), word: "美食2" },
+        { id: 3, picurl: require("@/assets/meishi1.png"), word: "美食3" },
+        { id: 4, picurl: require("@/assets/meishi1.png"), word: "美食4" },
+        { id: 5, picurl: require("@/assets/meishi1.png"), word: "美食5" },
+        { id: 6, picurl: require("@/assets/meishi1.png"), word: "美食6" },
+        { id: 7, picurl: require("@/assets/meishi1.png"), word: "美食7" },
+        { id: 8, picurl: require("@/assets/meishi1.png"), word: "美食8" }
       ],
       detailmsg: [
         {
@@ -232,222 +232,227 @@ export default {
     //   .catch(function(error) {
     //     console.log(error);
     //   });
-  },
+  }
 };
 </script>
 
 <style scoped lang="scss">
-.swiper-container {
-  // border: 1px solid red;
-  border-bottom: 1px solid rgb(141, 134, 134);
-  margin-top: 0.4rem;
-  height: 1.6rem;
-  width: 100%;
-  .swiper-wrapper {
+.outcontain {
+  // border:1px solid red;
+  width:3.2rem;
+  // height:100%;
+  .swiper-container {
+    // border: 1px solid red;
+    border-bottom: 1px solid rgb(141, 134, 134);
+    margin-top: 0.4rem;
     height: 1.6rem;
-    width: 100%;
-    .swiper-slide {
-      // border: 1px solid red;
+    width: 3.2rem;
+    .swiper-wrapper {
       height: 1.6rem;
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      .item-part {
+      width: 3.2rem;
+      .swiper-slide {
         // border: 1px solid red;
-        height: 0.75rem;
-        width: 0.75rem;
+        height: 1.6rem;
+        width: 3.2rem;
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         justify-content: space-around;
-        align-items: center;
-        .pic-part {
+        .item-part {
           // border: 1px solid red;
-          height: 0.4rem;
-          width: 0.4rem;
-          img {
+          height: 0.75rem;
+          width: 0.75rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          .pic-part {
+            // border: 1px solid red;
             height: 0.4rem;
             width: 0.4rem;
+            img {
+              height: 0.4rem;
+              width: 0.4rem;
+            }
           }
-        }
-        .word-part {
-          // border: 1px solid red;
-          height: 0.2rem;
-          width: 0.4rem;
-          line-height: 0.2rem;
-          padding-left: 0.07rem;
+          .word-part {
+            // border: 1px solid red;
+            height: 0.2rem;
+            width: 0.4rem;
+            line-height: 0.2rem;
+            padding-left: 0.07rem;
+          }
         }
       }
     }
   }
-}
-.middle-space {
-  height: 0.1rem;
-  background: rgb(230, 221, 221);
-}
-.near-food {
-  width: 100%;
-  border: 1px solid rgb(141, 134, 134);
-  .near-title {
-    // border: 1px solid red;
-    height: 0.3rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin-left: 0.1rem;
-    img {
-      // border: 1px solid red;
-      height: 0.2rem;
-      width: 0.2rem;
-    }
-    span {
-      // border: 1px solid red;
-      height: 0.2rem;
-      width: 1rem;
-      line-height: 0.2rem;
-    }
+  .middle-space {
+    height: 0.1rem;
+    background: rgb(230, 221, 221);
   }
-  .allstore {
-    // border: 1px solid red;
-    width: 100%;
-    .storeitem {
+  .near-food {
+    width: 3.2rem;
+    // border: 1px solid rgb(141, 134, 134);
+    .near-title {
       // border: 1px solid red;
-      border-bottom: 1px solid rgb(224, 220, 220);
-      height: 0.9rem;
+      height: 0.3rem;
+      width: 3.2rem;
       display: flex;
-      justify-content: space-around;
       align-items: center;
-      .leftitem {
+      padding-left: 0.1rem;
+      img {
         // border: 1px solid red;
-        height: 0.8rem;
-        width: 1.8rem;
+        height: 0.2rem;
+        width: 0.2rem;
+      }
+      span {
+        // border: 1px solid red;
+        height: 0.2rem;
+        width: 1rem;
+        line-height: 0.2rem;
+      }
+    }
+    .allstore {
+      // border: 1px solid red;
+      width: 3.2rem;
+      .storeitem {
+        // border: 1px solid red;
+        border-bottom: 1px solid rgb(224, 220, 220);
+        height: 0.9rem;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
-        img {
+        .leftitem {
           // border: 1px solid red;
-          height: 0.7rem;
-          width: 0.7rem;
+          height: 0.8rem;
+          width: 1.9rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            // border: 1px solid red;
+            height: 0.7rem;
+            width: 0.7rem;
+          }
+          .leftdetail {
+            // border: 1px solid red;
+            height: 0.8rem;
+            width: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .topitem {
+              // border: 1px solid red;
+              height: 0.2rem;
+              width: 1.2rem;
+              line-height: 0.2rem;
+              display: flex;
+              align-items: center;
+              .pinpai {
+                // border: 1px solid red;
+                height: 0.18rem;
+                width: 0.28rem;
+                background: yellow;
+                border-radius: 0.05rem;
+                line-height: 0.18rem;
+              }
+              .storename {
+                // border: 1px solid red;
+                width: 0.92rem;
+                height: 0.18rem;
+                line-height: 0.18rem;
+                overflow: hidden;
+              }
+            }
+            .middleitem {
+              // border: 1px solid red;
+              height: 0.2rem;
+              width: 1.2rem;
+              line-height: 0.2rem;
+              display: flex;
+              align-items: center;
+              .starcontainer {
+                // border: 1px solid red;
+                height: 0.2rem;
+                width: 0.5rem;
+              }
+              .mark-solenumb {
+                // border: 1px solid red;
+                height: 0.2rem;
+                width: 0.7rem;
+                .mark {
+                  // border: 1px solid red;
+                  height: 0.2rem;
+                  width: 0.2rem;
+                  font-size: 0.04rem;
+                }
+                .solenumb {
+                  // border: 1px solid red;
+                  height: 0.2rem;
+                  width: 0.5rem;
+                  font-size: 0.04rem;
+                }
+              }
+            }
+            .buttomitem {
+              // border: 1px solid red;
+              height: 0.2rem;
+              width: 1.2rem;
+              line-height: 0.2rem;
+              .startprice {
+                // border: 1px solid red;
+                height: 0.2rem;
+                width: 1.2rem;
+                font-size: 0.1rem;
+              }
+            }
+          }
         }
-        .leftdetail {
+        .rightitem {
           // border: 1px solid red;
           height: 0.8rem;
           width: 1.1rem;
           display: flex;
           flex-direction: column;
           justify-content: space-around;
-          .topitem {
+          .topmessage {
             // border: 1px solid red;
             height: 0.2rem;
             width: 1.1rem;
+            text-align: right;
             line-height: 0.2rem;
+            font-size: 0.1rem;
+          }
+          .middlemessage {
+            // border: 1px solid red;
+            height: 0.2rem;
+            width: 1.1rem;
             display: flex;
+            flex-direction: row-reverse;
             align-items: center;
-            .pinpai {
-              // border: 1px solid red;
-              height: 0.18rem;
-              width: 0.28rem;
-              background: yellow;
-              border-radius: 0.05rem;
-              line-height: 0.18rem;
+            .zhuansong {
+              border: 1px solid rgb(44, 47, 206);
+              border-radius: 0.03rem;
+              background: rgb(44, 47, 206);
+              height: 0.1rem;
+              width: 0.45rem;
+              font-size: 0.05rem;
             }
-            .storename {
-              // border: 1px solid red;
-              width: 0.82rem;
-              height: 0.18rem;
-              line-height: 0.18rem;
-              overflow: hidden;
+            .zhunshi {
+              border: 1px solid rgb(44, 47, 206);
+              border-radius: 0.03rem;
+              height: 0.1rem;
+              width: 0.35rem;
+              font-size: 0.05rem;
             }
           }
-          .middleitem {
+          .buttommessage {
             // border: 1px solid red;
             height: 0.2rem;
             width: 1.1rem;
+            font-size: 0.1rem;
+            text-align: right;
             line-height: 0.2rem;
-            display: flex;
-            align-items: center;
-            .starcontainer {
-              // border: 1px solid red;
-              height: 0.2rem;
-              width: 0.5rem;
-            }
-            .mark-solenumb {
-              // border: 1px solid red;
-              height: 0.2rem;
-              width: 0.6rem;
-              .mark {
-                // border: 1px solid red;
-                height: 0.2rem;
-                width: 0.2rem;
-                font-size: 0.04rem;
-              }
-              .solenumb {
-                // border: 1px solid red;
-                height: 0.2rem;
-                width: 0.4rem;
-                font-size: 0.04rem;
-              }
-            }
           }
-          .buttomitem {
-            // border: 1px solid red;
-            height: 0.2rem;
-            width: 1.1rem;
-            line-height: 0.2rem;
-            .startprice {
-              // border: 1px solid red;
-              height: 0.2rem;
-              width: 1.1rem;
-              font-size: 0.1rem;
-            }
-          }
-        }
-      }
-      .rightitem {
-        // border: 1px solid red;
-        height: 0.8rem;
-        width: 1.1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        .topmessage {
-          // border: 1px solid red;
-          height: 0.2rem;
-          width: 1.1rem;
-          text-align: right;
-          line-height: 0.2rem;
-          font-size: 0.1rem;
-        }
-        .middlemessage {
-          // border: 1px solid red;
-          height: 0.2rem;
-          width: 1.1rem;
-          display: flex;
-          flex-direction: row-reverse;
-          align-items: center;
-          .zhuansong {
-            border: 1px solid rgb(44, 47, 206);
-            border-radius: 0.03rem;
-            background: rgb(44, 47, 206);
-            height: 0.1rem;
-            width: 0.4rem;
-            font-size: 0.06rem;
-          }
-          .zhunshi {
-            border: 1px solid rgb(44, 47, 206);
-            border-radius: 0.03rem;
-            height: 0.1rem;
-            width: 0.3rem;
-            font-size: 0.06rem;
-          }
-        }
-        .buttommessage {
-          // border: 1px solid red;
-          height: 0.2rem;
-          width: 1.1rem;
-          font-size: 0.1rem;
-          text-align: right;
-          line-height: 0.2rem;
         }
       }
     }

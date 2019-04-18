@@ -29,14 +29,14 @@ export default {
 .titlebox {
   // border:1px solid red;
   height: 0.4rem;
-  width: 100%;
+  width: 3.2rem;
   position: fixed;
   top: 0;
   left:0;
   background: rgb(65, 102, 202);
   display: flex;
   justify-content: center;
-  z-index: 1000;
+  z-index: 999;
   .backItm {
     height: 0.4rem;
     width: 0.4rem;

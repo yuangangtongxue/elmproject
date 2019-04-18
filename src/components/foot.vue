@@ -68,7 +68,7 @@ export default {
   // border: 1px solid red;
   border-top:1px solid rgb(146, 138, 138);
   height: 0.5rem;
-  width: 100%;
+  width: 3.2rem;
   position: fixed;
   bottom: 0;
   left: 0;
