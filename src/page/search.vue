@@ -1,6 +1,7 @@
 <template>
   <div>
       <titlecomponent></titlecomponent>
+      <div class="contain"></div>
       <foot></foot>
   </div>
 </template>
